@@ -7,7 +7,7 @@ def index(request):
         msg = request.GET['msg']
         result = 'you typed: "' + msg + '".'
     else:
-        result = 'please send msg parameter!'
+        return render(request, 'hello/index.html')
     return HttpResponse(result)
 
 def show(request, id, nickname):
